@@ -1,2 +1,2 @@
 # pythonProject
-testing varity of frwameworks
+testing variety of frameworks model
