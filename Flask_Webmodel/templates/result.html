@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <script>
+
+
+         window.onload = function() {
+            const userInput = "{{ user_input | escape }}";
+            const hobby = "{{ hobby | escape }}";
+            const gender = "{{ gender | escape }}";
+            if (userInput) {
+                alert("You entered: " + userInput +" "+hobby+" "+gender);
+            }
+        };
+
+        </script>
+</head>
+<body>
+    <h2>You entered:</h2>
+    <p>{{ user_input }}</p>
+    <a href="/">Go back</a>
+</body>
+</html>

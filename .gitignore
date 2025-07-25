@@ -4,3 +4,9 @@
 /selenium_ui_api_hybridmodel/assets/
 /selenium_ui_api_hybridmodel/.pytest_cache/
 /selenium_ui_api_hybridmodel/report.html
+/.venv/
+/log/
+/report/
+/selenium_ui_api_hybridmodel/report/
+/selenium_ui_api_hybridmodel/screenshots/
+/allure-results/

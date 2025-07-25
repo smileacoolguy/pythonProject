@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Call Python Method: QA</title>
+    <h1 id="myh1">Click the link to call Python method: </h1>
+
+
+
+    <script>
+
+
+        function callPythonMethod() {
+
+
+
+            fetch('/run-method')
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function callPythonMethod1() {
+
+            fetch('/run-method1')
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+
+    <form action="/submit" method="post">
+
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="user_input" placeholder="Your name" required minlength="3">
+                <button type="submit">Submit</button>
+                    {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+        <br><label><input type="checkbox" name="hobby" value="reading"> Reading</label><br>
+        <label><input type="checkbox" name="hobby" value="traveling"> Traveling</label><br>
+        <label><input type="radio" name="gender" value="male" required> Male</label><br>
+        <label><input type="radio" name="gender" value="female"> Female</label><br>
+            </form>
+
+
+    <a href="#" onclick="callPythonMethod()">Call Python Method</a> <br>
+    <a href="#" onclick="callPythonMethod1()">Call Python Method1</a>
+
+
+
+</body>
+</html>
